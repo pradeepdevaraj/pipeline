@@ -1,6 +1,7 @@
 pipeline {
 agent none
 stages {
+	parallel {
         stage('Build') {
 		 agent { label 'master' }
             steps {
@@ -23,5 +24,6 @@ stages {
 				sh ' chmod 777 build deploy test; ./test'
 					}
 				}
+    }
     }
 }
