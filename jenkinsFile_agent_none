@@ -1,7 +1,8 @@
 pipeline {
 agent none
+parallel {
 stages {
-	parallel {
+	
         stage('Build') {
 		 agent { label 'master' }
             steps {
