@@ -3,7 +3,7 @@ agent any
 stages {
         stage('Build') {
             steps {
-                 echo 'Building..'
+                echo 'Building..'
 				sh '''
 						set +x
 						cd c_programs
